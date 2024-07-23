@@ -26,21 +26,6 @@ So, we designed a system which fulfills all of the above criteria with many diff
 
 
 
-## Technology Used
-- Ubuntu 16.04
-- Hyperledger Composer and Fabric for Blockchain Development:-
-- *Hyperledger Fabric* is a platform for distributed ledger solutions underpinned by a modular architecture delivering high degrees of confidentiality, resiliency, flexibility and scalability. It is designed to support pluggable implementations of different components and accommodate the complexity and intricacies that exist across the economic ecosystem.
-- *Hyperledger Composer* is a set of collaboration tools for building blockchain business networks that make it simple and fast for business owners and developers to create smart contracts and blockchain applications to solve business problems.
-
-- Inter Planetary File System (IPFS) for Data Storage
-IPFS is a peer-to-peer distributed file system that seeks to connect all computing devices with the same system of files. In few ways IPFS is similar to the World Wide Web, but IPFS could be seen as a single BitTorrent swarm exchanging objects within one Git repository. IPFS has no single point of failure and nodes do not need to trust each other except for every node they are connected to. Distributed Content Delivery saves bandwidth and prevents DDos attacks, which HTTP struggles with.
-- Javascript:- for implementing logical capabilities in Blockchain network.
-- HTML/CSS for Front-end purposes
-- Django for Back-end purposes
-- SSl for Certificate Creation
-- RSA for Encryption/Decryption
-- Web Services like Azure or AWS:- These services might be used for deploying our Blockchain based system on cloud.
-
 ## Flow Chart
 ![Image of Flow Chart](https://github.com/anubansal17/Secured-Blockchain-Based-Examination-Management-System/blob/master/images/Flow%20Diagram.png)
 
@@ -54,32 +39,6 @@ IPFS is a peer-to-peer distributed file system that seeks to connect all computi
 - The superintendent of center receives these details. Superintendent gets details of question paper retrieval from block chain ledger
 - After getting the details automatic request to retrieve paper from IPFS is sent and then superintendent gets the original paper 
 
-## Testing
-### Unit Testing:-
-Unit Testing is a level of software testing where individual units/ components of a software are tested. The purpose is to validate that each unit of the software performs as designed. Various modules used in the system are tested individually through this testing.
-We had 3 modules in our project which are described as follows-</br>
-
-1) Blockchain Module: Testing was performed only on the working of the blockchain system to check if all the functionalities provided by blockchain system are running fine or not. Initially, we used Hyperledger Fabric for the blockchain network implementation and tested the system if we were able to do the transactions in the Blockchain Ledger.</br>
-**Status after testing - Success** 
-
-2) Web + Data Storage Module: Testing was performed to check if all the functionalities are working fine on the front-end part of the website and if all the data involved in the system is storing on the local database or online distributed database accordingly.</br> 
-**Status after testing - Success**
-
-3) Security Module: Testing was performed to check if the techniques like symmetric and asymmetric encryption used to enhance the security of the system are working fine and to check vulnerabilities in these techniques, if any.</br>
-**Status after testing - Success**
-
-### Integration Testing:-
-Integration Testing is a level of software testing where individual units are combined and tested as a group. The purpose of this level of testing is to expose faults in the interaction between integrated units. 
-Above mentioned three modules are integrated together to check the compatibility of all three modules with each other.
-To do this, first of all security module was integrated with web + data storage module and then all the functionalities provided by these modules are tested.</br>
-**Status after testing - Success**
-Secondly, we tried to integrate Blockchain module with already integrated modules(web and security) to check the compatibility of these modules with each other. After testing we came to know that interaction between Django web server and Hyperledger Fabric Blockchain server is not possible directly,i.e. These can not be integrated directly.</br>
-**Status after testing - Failed**
-
-### System Testing:-
-System Testing is a type of software testing that is performed on a complete, integrated system to evaluate the compliance of the system with the corresponding requirements.
-After integration testing, we searched for some other work around which can be used to integrate the Blockchain module with (web+security) module and we got to know that Hyperledger Composer can be used to integrate both the modules. Hyperledger Composer made the interaction between the web and Blockchain server smooth. All the functionalities provided by the system are working as per the requirements.</br>
-**Status after testing - Success**
 
 ## Project Snapshots
 ### 1) Login Page
